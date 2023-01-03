@@ -5,10 +5,10 @@
 #		<make POST_NAME='name' POST_TITLE='title' post> - to create a new blog
 
 build:
-		hugo server -s /root/holbertonschool-validation/module1_task1
+		hugo -s /root/holbertonschool-validation/module1_task1
 
-clean:
-		rm -r dist/*
+clean: #remove if exists
+		rm -fr dist/* 
 
 post:
 		hugo new posts/$(POST_NAME).md
