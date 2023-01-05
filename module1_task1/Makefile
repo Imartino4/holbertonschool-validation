@@ -7,9 +7,9 @@
 build:
 		hugo -s /root/holbertonschool-validation/module1_task1
 
-clean: #remove if exists
+clean:
 		rm -fr dist/* 
 
-post:
+post:	
 		hugo new posts/$(POST_NAME).md
-# queda ver como poner el título
+		sed -e 's/title: .*/title: "$(POST_TITLE)"/' content/posts/$(POST_NAME).md > aux.tmp && mv aux.tmp content/posts/$(POST_NAME).md
