@@ -9,6 +9,7 @@ Requirements to build website with GO-Hugo
     * build -> make build
     * post -> make POST_NAME=who-are-we POST_TITLE="Who are we" post
     * clean -> make clean
+    * help -> make help
 
     
  
