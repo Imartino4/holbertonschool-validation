@@ -1,12 +1,12 @@
-Introduction to devops
+Requirements to build website with GO-Hugo
 ======================
 
 ## Prerequisites:
-    *   Shell terminal basics, using command lines
-    *   Git with the command line
-    *   Makefile usage
+    * Ubuntu 18.04
+    * install git, go, HUGO, GNUmake
 
 ## Lifecycle:
-    Holaaaa
-    
- 
+    * build -> make build
+    * post -> make POST_NAME=who-are-we POST_TITLE="Who are we" post
+    * clean -> make clean
+    * help -> make help

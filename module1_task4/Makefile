@@ -1,10 +1,3 @@
-# Makefile
-# Usage: 
-#		<make build>
-#		<make clean>
-#		<make POST_NAME='name' POST_TITLE='title' post>
-#		<make help>
-
 build: ## generate the website
 		hugo
 
