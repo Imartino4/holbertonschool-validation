@@ -1,7 +1,7 @@
 build:# generate the website
 		hugo
 
-clean:# cleanup dist directory
+clean:# clean dist directory
 		rm -fr dist/*
 
 post:# create a new blog
