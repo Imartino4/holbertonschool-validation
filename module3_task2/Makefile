@@ -18,7 +18,7 @@ package:	## make a zip
 	zip -r awesome-website.zip dist
 
 lint:  		## update files with mkd
-	mdl DEPLOY.md
+	markdownlint -f DEPLOY.md
 
 unit-tests:	## ERROR: No comment found for target unit-tests in ./Makefile
 
