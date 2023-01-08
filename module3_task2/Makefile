@@ -19,3 +19,6 @@ package:	## make a zip
 
 lint:  		## update files with mkd
 	mdl DEPLOY.md
+
+unit-test:	##unittest
+	cd
