@@ -6,5 +6,5 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-        uses: actions/checkout@v3
-        run: cd module3_task0 && make help
+      uses: actions/checkout@v3
+      run: cd module3_task0 && make help
