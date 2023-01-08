@@ -1,0 +1,35 @@
+name: module3_task2
+
+on:
+  push:
+  schedule:
+    - cron: "0 0 * * *"
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v3
+      - run: |
+            cd module3_task2
+            sudo ./setup.sh
+      - run: |
+            cd module3_task2
+            make build
+      - run: |
+            cd module3_task2
+            make POST_NAME=name POST_TITLE=title post
+      - run: |
+            cd module3_task2
+            make clean
+      - run: |
+            cd module3_task2
+            make help
+      - run: |
+            cd module3_task2
+            make greet
+      - run: |
+            cd module3_task2
+            make lint
+      - run: |
+            cd module3_task1
+            make package
