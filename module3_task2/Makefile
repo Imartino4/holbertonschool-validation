@@ -20,5 +20,9 @@ package:	## make a zip
 lint:  		## update files with mkd
 	mdl DEPLOY.md
 
-unit-test:	##unittest
+unit-test:	##unit-test
 	cd
+
+integration-tests: ## integration-tests
+
+validate: ## validate
