@@ -1,3 +1,5 @@
+name: task0
+
 on:
   push:
   schedule:
