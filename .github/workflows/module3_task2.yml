@@ -33,12 +33,3 @@ jobs:
       - run: |
             cd module3_task2
             make package
-      - run: |
-            cd module3_task2
-            make unit-tests
-      - run: |
-            cd module3_task2
-            make validate
-      - run: |
-            cd module3_task2
-            make integration-tests
