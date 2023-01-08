@@ -5,14 +5,4 @@ on:
         runs-on: ubuntu-latest
         steps:
           - uses: actions/checkout@v3
-          - run: make help
-  schedule:
-    - cron: '0 0 * * *'
-      jobs:
-        check-bats-version:
-          runs-on: ubuntu-latest
-          steps:
-            - uses: actions/checkout@v3
-            - run: make help
-
   
