@@ -15,7 +15,7 @@ greet: ## greets
 	echo "Hello my friend"
 
 package: ## make a zip
-	zip awesome-website.zip dist
+	zip -r awesome-website.zip dist
 
 lint:  ## update files with mkd
 	mdl DEPLOY.md
