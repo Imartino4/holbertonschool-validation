@@ -31,5 +31,5 @@ jobs:
             cd module3_task2
             make lint
       - run: |
-            cd module3_task1
+            cd module3_task2
             make package
