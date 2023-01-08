@@ -20,9 +20,9 @@ package:	## make a zip
 lint:  		## update files with mkd
 	mdl DEPLOY.md
 
-unit-test:	##unit-test
+unit-test:	## ERROR: No comment found for target unit-tests in ./Makefile
 	cd
 
-integration-tests: ## integration-tests
+integration-tests: ## ERROR: No comment found for target integration-tests in ./Makefile
 
-validate: ## validate
+validate: ## ERROR: No comment found for target validate in ./Makefile
