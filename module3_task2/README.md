@@ -11,6 +11,9 @@ Requirements to build website with GO-Hugo
     * clean -> make clean
     * lint
     * package
+    * unit-tests
+    * integration-tests
+    * validate
     * help -> make help
 
 ## Workflow:
