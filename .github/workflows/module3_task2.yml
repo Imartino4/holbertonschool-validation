@@ -33,6 +33,3 @@ jobs:
       - run: |
             cd module3_task2
             make package
-      - uses: actions/upload-artifact@v3
-        with:
-            path: module3_task2/
