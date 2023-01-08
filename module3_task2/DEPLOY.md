@@ -4,5 +4,4 @@
 * b
 * c
 * d
-* zip
-* tag
+File zip with tag
