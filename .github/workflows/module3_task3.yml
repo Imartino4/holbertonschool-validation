@@ -18,7 +18,7 @@ jobs:
         run: |
             cd module3_task3
             make build
-      - name: Post 
+      - name: Post
         run: |
             cd module3_task3
             make POST_NAME=name POST_TITLE=title post
@@ -30,7 +30,7 @@ jobs:
         run: |
             cd module3_task3
             make help
-      - name: Greet  
+      - name: Greet
         run: |
             cd module3_task3
             make greet
