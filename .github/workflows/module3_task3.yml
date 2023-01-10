@@ -8,39 +8,40 @@ jobs:
   deploy:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v3
-      - run: |
+      - name: Clone repo
+        uses: actions/checkout@v3
+      - name: Installing
+        run: |
             cd module3_task3
             sudo ./setup.sh
-      - run: |
+      - name: Build
+        run: |
             cd module3_task3
             make build
-      - run: |
+      - name: Post 
+        run: |
             cd module3_task3
             make POST_NAME=name POST_TITLE=title post
-      - run: |
+      - name: Clean
+        run: |
             cd module3_task3
             make clean
-      - run: |
+      - name: Help
+        run: |
             cd module3_task3
             make help
-      - run: |
+      - name: Greet  
+        run: |
             cd module3_task3
             make greet
-      - run: |
+      - name: Lint
+        run: |
             cd module3_task3
             make lint
-      - run: |
-            cd module3_task3
-            make package
-            - name: Artifact
-      - uses: actions/upload-artifact@v3
-        with:
-          name: artifact
-          path: module3_task3/
-      - uses: softprops/action-gh-release@v1
+      - name: Release
+        uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: |
-            module3_task3/DEPLOY.md
             module3_task3/awesome-website.zip
+            module3_task3/dist/
