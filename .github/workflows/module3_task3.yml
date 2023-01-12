@@ -22,18 +22,18 @@ jobs:
         run: |
             cd module3_task3
             make POST_NAME=name POST_TITLE=title post
-      - name: Clean
+      - name: Package
         run: |
             cd module3_task3
-            make clean
+            make package
       - name: Help
         run: |
             cd module3_task3
             make help
-      - name: Greet
+      - name: Clean
         run: |
             cd module3_task3
-            make greet
+            make clean
       - name: Lint
         run: |
             cd module3_task3
