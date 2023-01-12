@@ -33,3 +33,7 @@ jobs:
       - run: |
             cd module3_task2
             make package
+      - name: unittest
+        run: |
+            cd module3_task3
+            make unit-tests
