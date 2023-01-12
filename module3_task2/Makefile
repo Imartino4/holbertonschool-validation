@@ -2,7 +2,7 @@ build:		## generate the website
 		hugo
 
 clean:		## clean dist directory
-		rm -fr dist/*
+		rm -fr dist/* ./awesome-website.zip
 
 post:		## create a new blog
 		hugo new posts/$(POST_NAME).md
