@@ -1,4 +1,4 @@
-name: module3_task4
+name: module3_task5
 
 on:
   push:
@@ -14,39 +14,39 @@ jobs:
         uses: actions/checkout@v3
       - name: Installing environment
         run: |
-            cd module3_task4
+            cd module3_task5
             sudo ./setup.sh
       - name: Build
         run: |
-            cd module3_task4
+            cd module3_task5
             make build
       - name: Post
         run: |
-            cd module3_task4
+            cd module3_task5
             make POST_NAME=name POST_TITLE=title post
       - name: Package
         run: |
-            cd module3_task4
+            cd module3_task5
             make package
       - name: Help
         run: |
-            cd module3_task4
+            cd module3_task5
             make help
       - name: Clean
         run: |
-            cd module3_task4
+            cd module3_task5
             make clean
       - name: Lint
         run: |
-            cd module3_task4
+            cd module3_task5
             make lint
       - name: Release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: |
-            module3_task4/DEPLOY.md
-            module3_task4/awesome-website.zip
+            module3_task5/DEPLOY.md
+            module3_task5/awesome-website.zip
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2
         with:
