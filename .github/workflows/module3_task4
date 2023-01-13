@@ -1,0 +1,49 @@
+name: module3_task4
+
+on:
+  push:
+  schedule:
+    - cron: "0 0 * * *"
+  pull_request:
+    types: [opened, reopened]
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@v3
+      - name: Installing environment
+        run: |
+            cd module3_task4
+            sudo ./setup.sh
+      - name: Build
+        run: |
+            cd module3_task4
+            make build
+      - name: Post
+        run: |
+            cd module3_task4
+            make POST_NAME=name POST_TITLE=title post
+      - name: Package
+        run: |
+            cd module3_task4
+            make package
+      - name: Help
+        run: |
+            cd module3_task4
+            make help
+      - name: Clean
+        run: |
+            cd module3_task4
+            make clean
+      - name: Lint
+        run: |
+            cd module3_task4
+            make lint
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: |
+            module3_task4/DEPLOY.md
+            module3_task4/awesome-website.zip
