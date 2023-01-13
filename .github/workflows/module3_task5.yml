@@ -40,6 +40,18 @@ jobs:
         run: |
             cd module3_task5
             make lint
+      - name: unittest
+        run: |
+            cd module3_task5
+            make unit-tests
+      - name: integration
+        run: |
+            cd module3_task5
+            make integration-tests
+      - name: validate
+        run: |
+            cd module3_task5
+            make validate
       - name: Release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
