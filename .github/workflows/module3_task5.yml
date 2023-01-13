@@ -52,6 +52,11 @@ jobs:
         run: |
             cd module3_task5
             make validate
+      - name: Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: hola
+          path: module3_task5/
       - name: Release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
@@ -59,13 +64,13 @@ jobs:
           files: |
             module3_task5/DEPLOY.md
             module3_task5/awesome-website.zip
-      - name: "🎉 Published on"
+      - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2
         with:
           publish-dir: './module3_task5/dist'
           production-branch: master
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          deploy-message: "🎉 Published on"
+          deploy-message: "Deploy from GitHub Actions"
           enable-pull-request-comment: true
           enable-commit-comment: true
           overwrites-pull-request-comment: true
